@@ -245,7 +245,7 @@ function setUserFacingSettings(settingsMap) {
         if (msec === undefined) {
             msec = 200;
         }
-        setTimeout(onTimeout, msec || 200);
+        setTimeout(onTimeout, msec);
     };
 
     StatusElement.prototype.hide = function() {
