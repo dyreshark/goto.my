@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>goto.my - Settings</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/theme.css" rel="stylesheet">
+
+    <style>
+      .inline-btn-alert {
+        margin: 5px;
+        padding: 7px 8px 9px 8px;
+      }
+    </style>
+  </head>
+
+  <body role="document">
+    <div class="container theme-showcase" role="main">
+      <div class="page-header">
+        <h1>goto.my settings</h1>
+      </div>
+
+      <button
+               type="button"
+               class="btn btn-primary"
+               id="save-button"
+               title="Save all settings">
+        Save all settings
+      </button>
+      <span id="save-status" class="alert inline-btn-alert" hidden="true" role="alert"></span>
+
+      <div class="page-header">
+        <h3>Mappings</h3>
+      </div>
+      Mappings are the core of this extension. If you type in part of the
+      keyword, you'll get the URL.
+      <div class="row">
+        <div class="col-md-6">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Keyword</th>
+                <th>URL</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="mapping-entries">
+            </tbody>
+          </table>
+          <button
+                   type="button"
+                   class="btn btn-default"
+                   id="add-button"
+                   title="Add a new blank mapping">
+            Add
+          </button>
+
+          <br /><br /> <!-- 2lazy2margin -->
+        </div>
+      </div>
+
+      <div class="page-header">
+        <h3>Other settings</h3>
+      </div>
+
+      <p>Default search is what we fall back on if nothing matches what was
+      typed. %s is replaced with your query prior to navigation. For example,
+      if I typed `g bar`, my default search was `foo/%s`, and nothing matched
+      `bar`, I would be nagivated to `foo/bar`.</p>
+
+      <p>If this field is blank, default search will be disabled</p>
+      <strong>Default Search: </strong>&nbsp;<input type="text" id="default-search">
+
+      <div class="page-header">
+        <h3>Reset All</h3>
+      </div>
+
+      <div>
+        <p>You can reset all settings to their defaults by clicking The Big Red
+        Button. This resets <strong>everything</strong>, including mappings +
+        general settings.</p>
+
+        <button type="button" class="btn btn-danger" id="reset-button">
+          Reset all settings
+        </button>
+        <span id="reset-status" class="alert inline-btn-alert" hidden="true" role="alert"></span>
+      </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="common.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
