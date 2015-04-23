@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "goto.my",
-  "description": "Custom URLs",
+  "description": "Custom URL short names with fuzzy matching",
   "version": "0.6.2",
 
   "omnibox": {"keyword": "g"},

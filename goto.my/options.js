@@ -19,7 +19,10 @@
     /* global noteChangedFields */
     window.noteChangedFields = function() { changesHappened = true; };
     /* global noteAllFieldsSaved */
-    window.noteAllFieldsSaved = function() { changesHappened = false; };
+    window.noteAllFieldsSaved = function() {
+        changesHappened = false;
+        isModifying = false;
+    };
 
     /* global hasUserChangedFields */
     window.hasUserChangedFields = function() {
@@ -34,14 +37,10 @@
     // immediately.
 
     /* global noteModifyingField */
-    window.noteModifyingField = function() {
-        isModifying = true;
-    };
+    window.noteModifyingField = function() { isModifying = true; };
 
     /* global noteNoLongerModifyingField */
-    window.noteNoLongerModifyingField = function() {
-        isModifying = false;
-    };
+    window.noteNoLongerModifyingField = function() { isModifying = false; };
 }());
 
 function trackChangesOfTextbox(box) {
