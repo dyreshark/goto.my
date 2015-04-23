@@ -3,7 +3,7 @@
 
   "name": "goto.my",
   "description": "Custom URL short names with fuzzy matching",
-  "version": "0.6.2",
+  "version": "0.6.3",
 
   "omnibox": {"keyword": "g"},
 
